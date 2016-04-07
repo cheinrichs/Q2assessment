@@ -6,31 +6,30 @@
         <div class="container bookHolder">
           <div class="row">
             <div class="col-md-3  photoHolder">
-              <a href="/authors/{{this.id}}"><img class="coverThumbnail" src="{{this.portrait_url}}" alt="{{this.first}}"/></a>
+              <img class="coverThumbnail" src="{{this.author.portrait_url}}" alt="{{this.author.first}}"/>
             </div>
             <div class="col-md-8">
-              <h2>{{this.name}} {{this.last}}</h2>
-              {{this.bio}}
+              <h2>{{this.author.first}} {{this.author.last}}</h2>
+              {{this.author.bio}}
             </div>
             <div class="col-md-1">
               <span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
               <span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-3">
+            <div class="row">
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-8">
+                <ul>
+                  {{#this.books}}
+                  <li>{{this.title}}</li>
+                  {{/this.books}}
+                </ul>
+              </div>
             </div>
-            <div class="col-md-8">
-              <ul>
-                {{#this.books}}
-                <li>{{this.title}}</li>
-                {{/this.books}}
-              </ul>
-            </div>
-          </div>
-        </div>
         {{/authors}}
-
+        </div>
       </table>
     </div>
   </div>
