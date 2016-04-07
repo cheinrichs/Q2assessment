@@ -7,11 +7,15 @@
             <div class="col-md-3  photoHolder">
               <img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/>
             </div>
-            <div class="col-md-9 borderYes">
+            <div class="col-md-8">
               <h2>{{this.title}}</h2>
-              by:<br>
+              by: {{this.first}} {{this.last}}<br>
               {{this.genre}}<br>
               {{this.description}}
+            </div>
+            <div class="col-md-1">
+              <span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
+              <span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
             </div>
           </div>
         {{/books}}

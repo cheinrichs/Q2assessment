@@ -56,6 +56,9 @@ body {
 	transform-origin: left top 0;
 }
 
+.editDelete {
+  color: rgba(0,0,0,.2);
+}
 
 .coverThumbnail {
   height: 180px;
