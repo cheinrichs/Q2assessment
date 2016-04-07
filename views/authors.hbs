@@ -1,1 +1,35 @@
-authors page!
+<div class="content">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-9">
+      <table class="table">
+        {{#authors}}
+          <div class="row bookHolder">
+            <div class="col-md-3  photoHolder">
+              <img class="coverThumbnail" src="{{this.portrait_url}}" alt="{{this.title}}"/>
+            </div>
+            <div class="col-md-8">
+              <h2>{{this.first}} {{this.last}}</h2>
+              {{this.genre}}<br>
+              {{this.bio}}
+            </div>
+            <div class="col-md-1">
+              <span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
+              <span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </div>
+          </div>
+        {{/authors}}
+      </table>
+    </div>
+  </div>
+</div>
+<div class="authorsBar">
+  <div class="vertical-text">
+    Authors
+  </div>
+</div>
+
+<div class="booksBar ">
+  <div class="vertical-text">
+    Books
+  </div>
+</div>
