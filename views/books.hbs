@@ -1,7 +1,21 @@
 <div class="content">
   <div class="row">
-    <div class="col-md-offset-3 col-md-9">
-      books page!
+    <div class="col-md-offset-2 col-md-9">
+      <table class="table">
+        {{#books}}
+          <div class="row bookHolder">
+            <div class="col-md-3  photoHolder">
+              <img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/>
+            </div>
+            <div class="col-md-9 borderYes">
+              <h2>{{this.title}}</h2>
+              by:<br>
+              {{this.genre}}<br>
+              {{this.description}}
+            </div>
+          </div>
+        {{/books}}
+      </table>
     </div>
   </div>
 </div>

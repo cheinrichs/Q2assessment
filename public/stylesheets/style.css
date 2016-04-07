@@ -33,18 +33,18 @@ body {
 }
 
 .authorsBar{
-  position: relative;
-  top: 50px;
-  left: 10px;
+  position: absolute;
+  top: 200px;
+  left: 58px;
   width: 100px;
   height: 225px;
   background-color: #F15048;
   border-radius: 5px 5px 0px 0px;
 }
 .booksBar{
-  position: relative;
-  top: 50px;
-  left: 10px;
+  position: absolute;;
+  top: 425px;
+  left: 58px;
   width: 100px;
   height: 225px;
   background-color: #BA514A;
@@ -54,4 +54,28 @@ body {
 .vertical-text {
 	transform: rotate(90deg);
 	transform-origin: left top 0;
+}
+
+
+.coverThumbnail {
+  height: 180px;
+}
+
+.photoHolder {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookHolder{
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.borderYes {
+  border: 1px solid black;
 }
