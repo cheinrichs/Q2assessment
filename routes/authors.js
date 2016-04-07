@@ -8,7 +8,12 @@ router.get('/', function(req, res, next) {
   queries.listAllAuthors().then(function(authors){
     res.render('authors', { authors: authors });
   });
+});
 
+router.get('/:id', function(req, res, next){
+  queries.showAuthorById(req.params.id).then(function(author){
+    res.render('authors', { authors: author });
+  });
 });
 
 module.exports = router;
