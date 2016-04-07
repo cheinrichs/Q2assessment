@@ -1,8 +1,33 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.centerViewPort {
+  border: 1px solid black;
+}
+
+.leftViewPort {
+  border: 1px solid black;
+}
+
+.rightViewPort {
+  border: 1px solid black;
+}
+
+
+.booksText {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 200px;
+  font-size: 50px;
+}
+
+
+.authorsText {
+  position: absolute;
+  color: white;
+  top: 100px;
+  left: 200px;
+  font-size: 50px;
 }
