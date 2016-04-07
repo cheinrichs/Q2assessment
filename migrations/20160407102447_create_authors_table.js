@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('first');
     table.string('last');
-    table.string('bio');
+    table.string('bio', 1000);
     table.string('portrait_url');
   })
 
