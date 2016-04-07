@@ -10,4 +10,11 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/:id', function(req, res, next){
+  queries.showBookById(req.params.id).then(function(book){
+    console.log(book);
+    res.render('books', {books: book});
+  });
+});
+
 module.exports = router;
