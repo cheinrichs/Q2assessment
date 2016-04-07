@@ -31,3 +31,27 @@ body {
   left: 200px;
   font-size: 50px;
 }
+
+.authorsBar{
+  position: relative;
+  top: 50px;
+  left: 10px;
+  width: 100px;
+  height: 225px;
+  background-color: #F15048;
+  border-radius: 5px 5px 0px 0px;
+}
+.booksBar{
+  position: relative;
+  top: 50px;
+  left: 10px;
+  width: 100px;
+  height: 225px;
+  background-color: #BA514A;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+}
