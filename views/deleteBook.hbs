@@ -10,7 +10,7 @@
             <h2><a href="/books/{{this.book.id}}">{{this.book.title}}</a></h2>
             by:
               {{#this.authors}}
-              <a href="/authors/{{this.id}}">{{this.first}}{{this.last}}</a>,
+              <a href="/authors/{{this.id}}">{{this.first}} {{this.last}}</a>,
               {{/this.authors}}
             <br>
             Genre: {{this.book.genre}}<br>
