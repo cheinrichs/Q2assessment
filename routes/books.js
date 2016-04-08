@@ -5,7 +5,7 @@ var queries = require('../lib');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   queries.listAllBooks().then(function(books){
-    res.render('books', {books: books});
+    res.render('books', { books: books.books, count: books.count[0] });
   });
 });
 
