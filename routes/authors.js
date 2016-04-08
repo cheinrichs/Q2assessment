@@ -6,7 +6,6 @@ var queries = require('../lib');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   queries.listAllAuthors().then(function(authors){
-    console.log(authors.count[0]);
     res.render('authors', { authors: authors.authors, count: authors.count[0] });
   });
 });
@@ -17,7 +16,6 @@ router.get('/new', function(req, res, next){
 
 router.get('/delete/:id', function(req, res, next){
   queries.showAuthorById(req.params.id).then(function(authors){
-    console.log(authors);
     res.render('deleteAuthor', { author: authors.author, books: authors.books });
   });
 });
