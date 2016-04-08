@@ -1,0 +1,65 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-9">
+      <table class="table">
+        {{#books}}
+          <div class="row bookHolder">
+            <div class="col-md-3  photoHolder">
+              <a href="/books/{{this.id}}"><img class="coverThumbnail" src="{{this.book.cover_url}}" alt="{{this.book.title}}"/></a>
+            </div>
+            <div class="col-md-8">
+              <h2><a href="/books/{{this.book.id}}">{{this.book.title}}</a></h2>
+              by:
+                {{#this.authors}}
+                <a href="/authors/{{this.id}}">{{this.first}}{{this.last}}</a>,
+                {{/this.authors}}
+              <br>
+              Genre: {{this.book.genre}}<br>
+              {{this.book.description}}
+            </div>
+            <div class="col-md-1">
+              <a href="/books/edit/{{this.book.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
+              <a href="/books/delete/{{this.book.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <div class="col-md-2">
+
+            </div>
+          </div>
+        {{/books}}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{{#if count}}
+<div class="bookCount">
+  Total Books: {{count.count}}
+</div>
+{{/if}}
+
+
+<a href="/books/new"><div class="addBookButton">Create New Book</div></a>
+
+<a href="/authors">
+<div class="authorsBar">
+  <div class="vertical-text">
+    Authors
+  </div>
+</div>
+</a>
+
+<a href="/books">
+<div class="booksBar ">
+  <div class="vertical-text">
+    Books
+  </div>
+</div>
+</a>

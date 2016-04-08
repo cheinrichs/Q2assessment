@@ -17,7 +17,10 @@ router.get('/new', function(req, res, next){
 
 router.get('/delete/:id', function(req, res, next){
   queries.showBookById(req.params.id).then(function(book){
-    res.render('deleteBook', {book: book[0]});
+    console.log('book');
+    console.log(book);
+
+    res.render('deleteBook', {book: book});
   });
 });
 
@@ -36,7 +39,8 @@ router.post('/createNewBook', function(req, res, next){
 
 router.get('/:id', function(req, res, next){
   queries.showBookById(req.params.id).then(function(book){
-    res.render('books', {books: book});
+    console.log(book);
+    res.render('book', {books: book});
   });
 });
 

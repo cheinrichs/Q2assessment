@@ -4,13 +4,17 @@
       {{#book}}
         <div class="row bookHolder">
           <div class="col-md-3  photoHolder">
-            <a href="/books/{{this.id}}"><img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/></a>
+            <a href="/books/{{this.book.id}}"><img class="coverThumbnail" src="{{this.book.cover_url}}" alt="{{this.book.title}}"/></a>
           </div>
           <div class="col-md-8">
-            <h2><a href="/books/{{this.id}}">{{this.title}}</a></h2>
-            by: {{this.first}} {{this.last}}<br>
-            {{this.genre}}<br>
-            {{this.description}}
+            <h2><a href="/books/{{this.book.id}}">{{this.book.title}}</a></h2>
+            by:
+              {{#this.authors}}
+              <a href="/authors/{{this.id}}">{{this.first}}{{this.last}}</a>,
+              {{/this.authors}}
+            <br>
+            Genre: {{this.book.genre}}<br>
+            {{this.book.description}}
           </div>
           <div class="col-md-1">
           </div>
