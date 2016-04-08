@@ -15,11 +15,14 @@ router.get('/new', function(req, res, next){
   });
 });
 
+router.post('/createNewBook', function(req, res, next){
+  queries.createBook(req.body.title, req.body.genre, req.body.description, req.body.coverImageUrl, req.body.authorsChecked).then(function(id){
+    res.redirect('/books');
+  });
+});
+
 router.get('/delete/:id', function(req, res, next){
   queries.showBookById(req.params.id).then(function(book){
-    console.log('book');
-    console.log(book);
-
     res.render('deleteBook', {book: book});
   });
 });
@@ -31,8 +34,16 @@ router.get('/deleteBook/:id', function(req, res, next){
   });
 });
 
-router.post('/createNewBook', function(req, res, next){
-  queries.createBook(req.body.title, req.body.genre, req.body.description, req.body.coverImageUrl, req.body.authorsChecked).then(function(id){
+router.get('/edit/:id', function(req, res, next){
+  queries.showBookById(req.params.id).then(function(book){
+    queries.getAuthors().then(function(authors){
+      res.render('editBook', { book: book , authors: authors});
+    });
+  })
+});
+
+router.post('/submitEdits/:id', function(req, res, next){
+  queries.editBook(req.params.id, req.body.title, req.body.genre, req.body.description, req.body.coverImageUrl, req.body.authorsChecked).then(function(){
     res.redirect('/books');
   });
 });
