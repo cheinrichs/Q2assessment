@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-1">
               <a href="/books/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
-              <a href="/books/edit/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+              <a href="/books/delete/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
             </div>
           </div>
         {{/books}}
@@ -24,6 +24,7 @@
   </div>
 </div>
 
+<a href="/books/new"><div class="addBookButton">Create New Book</div></a>
 
 <a href="/authors">
 <div class="authorsBar">

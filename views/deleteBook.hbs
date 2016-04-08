@@ -1,0 +1,43 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-offset-2 col-md-9">
+      {{#book}}
+        <div class="row bookHolder">
+          <div class="col-md-3  photoHolder">
+            <a href="/books/{{this.id}}"><img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/></a>
+          </div>
+          <div class="col-md-8">
+            <h2><a href="/books/{{this.id}}">{{this.title}}</a></h2>
+            by: {{this.first}} {{this.last}}<br>
+            {{this.genre}}<br>
+            {{this.description}}
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      {{/book}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-2 col-md-10">
+      <a href="/books/deleteBook/{{book.id}}"><button type="button" class="btn-primary" name="button">Delete this book</button></a>
+    </div>
+  </div>
+</div>
+
+
+<a href="/authors">
+<div class="authorsBar">
+  <div class="vertical-text">
+    Authors
+  </div>
+</div>
+</a>
+
+<a href="/books">
+<div class="booksBar ">
+  <div class="vertical-text">
+    Books
+  </div>
+</div>
+</a>

@@ -47,7 +47,7 @@ body {
   left: 58px;
   width: 100px;
   height: 225px;
-  background-color: #BA514A;
+  background-color: #D65D9D;
   border-radius: 0px 0px 5px 5px;
 }
 
@@ -101,4 +101,23 @@ body {
   text-decoration: none;
   color: white;
   text-align: center;
+}
+
+.addBookButton {
+  position: absolute;
+  top: 80px;
+  right: 58px;
+  width: 100px;
+  height: 40px;
+  background-color: #F15048;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.authorsSelect {
+  height: 100px;
+  width: 200px;
+  overflow: scroll;
 }
