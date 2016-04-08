@@ -10,6 +10,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.post('/results', function(req, res, next){
+  queries.listSomeAuthors(req.body.limitDropdown).then(function(authors){
+    res.render('authors', { authors: authors.authors, count: authors.count[0]})
+  });
+});
+
 router.get('/new', function(req, res, next){
   res.render('newAuthor');
 });

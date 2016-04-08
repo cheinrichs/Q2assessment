@@ -39,18 +39,20 @@
 </div>
 {{/if}}
 
-<div class="form-group limit">
-  <label for="limitDropdown">Display Results:</label>
-  <select class="form-control" id="limitDropdown">
-    <option value="1">1</option>
-    <option value="5">5</option>
-    <option value="10">10</option>
-    <option value="Show All" selected>Show All</option>
-  </select>
-</div>
+
+<form class="" action="/authors/results" method="post">
+  <div class="form-group limit">
+    <select class="form-control" name="limitDropdown" id="limitDropdown" onchange="this.form.submit()">
+      <option value="1">1</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="100">100</option>
+      <option value="Show All" selected>Limit Results...</option>
+    </select>
+  </div>
+</form>
 
 <a href="/authors/new"><div class="addAuthorButton">Create New Author</div></a>
-
 
 <a href="/authors">
 <div class="authorsBar">

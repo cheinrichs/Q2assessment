@@ -9,6 +9,12 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.post('/results', function(req, res, next){
+  queries.listSomeBooks(req.body.limitDropdown).then(function(books){
+    res.render('books', { books: books.books, count: books.count[0]})
+  });
+});
+
 router.get('/new', function(req, res, next){
   queries.getAuthors().then(function(authors){
     res.render('newBook', {authors: authors});
