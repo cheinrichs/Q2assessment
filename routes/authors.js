@@ -33,7 +33,6 @@ router.get('/edit/:id', function(req, res, next){
 });
 
 router.post('/submitEdits/:id', function(req, res, next){
-  console.log("do we get here?");
   queries.editAuthor(req.params.id, req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(){
     res.redirect('/authors');
   });
