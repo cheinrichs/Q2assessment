@@ -6,7 +6,8 @@ var queries = require('../lib');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   queries.listAllAuthors().then(function(authors){
-    res.render('authors', { authors: authors });
+    console.log(authors.count[0]);
+    res.render('authors', { authors: authors.authors, count: authors.count[0] });
   });
 });
 

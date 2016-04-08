@@ -121,3 +121,9 @@ body {
   width: 200px;
   overflow: scroll;
 }
+
+.authorCount {
+  position: absolute;
+  top: 120px;
+  left: 276px;
+}
