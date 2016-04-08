@@ -15,8 +15,17 @@ router.get('/new', function(req, res, next){
 });
 
 router.post('/createNewAuthor', function(req, res, next){
-  console.log("new author created!");
-  res.redirect('/authors');
+  queries.createAuthor(req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(id){
+    console.log("new author created!");
+    console.log(req.body.firstName);
+    console.log(req.body.lastName);
+    console.log(req.body.portraitUrl);
+    console.log(req.body.biography);
+    res.redirect('/authors');
+  });
+
+
+
 });
 
 router.get('/:id', function(req, res, next){

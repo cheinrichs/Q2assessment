@@ -1,7 +1,7 @@
 <div class="content">
-  <div class="row">
-    <div class="col-md-offset-2 col-md-9">
-      <form class="form input-group" action="/authors/createNewAuthor" method="post">
+  <div class="row col-md-offset-2 col-md-9">
+    Add a new author -
+      <form role="form" class="form input-group" action="/authors/createNewAuthor" method="post">
         <label for="firstName">First Name:</label>
         <input type="text" class="form-control" name="firstName" value="">
         <br>
@@ -11,10 +11,11 @@
         <label for="portraitUrl">Portrait Url:</label>
         <input type="text" class="form-control" name="portraitUrl" value="">
         <br>
-        <input type="submit" class="btn-primary" name="name" value="Submit">
+        <label for="biography">Biography:</label>
+        <textarea rows=10 cols=7 type="text" class="form-control" name="biography" value=""></textarea>
+        <br>
+        <input type="submit" class="btn-primary" name="submit" value="Submit">
       </form>
-
-    </div>
   </div>
 </div>
 

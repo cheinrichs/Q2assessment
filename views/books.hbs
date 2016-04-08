@@ -14,8 +14,8 @@
               {{this.description}}
             </div>
             <div class="col-md-1">
-              <span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
-              <span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
+              <a href="/books/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
+              <a href="/books/edit/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
             </div>
           </div>
         {{/books}}
