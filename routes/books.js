@@ -29,10 +29,16 @@ router.get('/deleteBook/:id', function(req, res, next){
 });
 
 router.post('/createNewBook', function(req, res, next){
-  //queries.createBook(req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(id){
-  console.log("new book created");
+  console.log(req.body.title);
+  console.log(req.body.genre);
+  console.log(req.body.description);
+  console.log(req.body.coverImageUrl);
+  console.log(req.body.authorsChecked);
+
+  queries.createBook(req.body.title, req.body.genre, req.body.description, req.body.coverImageUrl, req.body.authorsChecked).then(function(id){
+  console.log("new book created" + id);
     res.redirect('/books');
-  // });
+  });
 });
 
 router.get('/:id', function(req, res, next){
