@@ -1,0 +1,38 @@
+<div class="content">
+  <div class="row col-md-offset-2 col-md-9">
+    Editing {{this.author.first}} {{this.author.last}}
+      <form role="form" class="form input-group" action="/authors/submitEdits/{{this.author.id}}" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" class="form-control" name="firstName" value="{{this.author.first}}">
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" class="form-control" name="lastName" value="{{this.author.last}}">
+        <br>
+        <label for="portraitUrl">Portrait Url:</label>
+        <input type="text" class="form-control" name="portraitUrl" value="{{this.author.portrait_url}}">
+        <br>
+        <label for="biography">Biography:</label>
+        <textarea rows=10 cols=10 type="text" class="form-control" name="biography">{{this.author.bio}}</textarea>
+        <br>
+        <input type="submit" class="btn-primary" name="submit" value="Submit">
+      </form>
+  </div>
+</div>
+
+
+
+<a href="/authors">
+<div class="authorsBar">
+  <div class="vertical-text">
+    Authors
+  </div>
+</div>
+</a>
+
+<a href="/books">
+<div class="booksBar ">
+  <div class="vertical-text">
+    Books
+  </div>
+</div>
+</a>

@@ -20,9 +20,21 @@ router.get('/delete/:id', function(req, res, next){
   });
 });
 
-
 router.get('/deleteAuthor/:id', function(req, res, next){
   queries.deleteAuthor(req.params.id).then(function(author){
+    res.redirect('/authors');
+  });
+});
+
+router.get('/edit/:id', function(req, res, next){
+  queries.showAuthorById(req.params.id).then(function(authors){
+    res.render('editAuthor', { author: authors.author, books: authors.book });
+  });
+});
+
+router.post('/submitEdits/:id', function(req, res, next){
+  console.log("do we get here?");
+  queries.editAuthor(req.params.id, req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(){
     res.redirect('/authors');
   });
 });
