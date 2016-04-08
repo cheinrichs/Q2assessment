@@ -82,3 +82,22 @@ body {
 .borderYes {
   border: 1px solid black;
 }
+
+.btn-primary {
+  border: none;
+  border-radius: 5px;
+}
+
+
+.addAuthorButton{
+  position: absolute;
+  top: 80px;
+  right: 58px;
+  width: 100px;
+  height: 40px;
+  background-color: #F15048;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}

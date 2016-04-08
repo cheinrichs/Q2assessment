@@ -10,6 +10,15 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/new', function(req, res, next){
+  res.render('newAuthor');
+});
+
+router.post('/createNewAuthor', function(req, res, next){
+  console.log("new author created!");
+  res.redirect('/authors');
+});
+
 router.get('/:id', function(req, res, next){
   queries.showAuthorById(req.params.id).then(function(author){
     res.render('author', { authors: author });
