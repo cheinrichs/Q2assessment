@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'postgresql',
-    connection: 'postgres://localhost/galvanize-reads',
+    connection: 'postgres://localhost/galvanize-reads' || process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
