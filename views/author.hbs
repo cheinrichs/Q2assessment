@@ -1,39 +1,28 @@
 <div class="content">
   <div class="row">
-    <div class="col-md-offset-2 col-md-9">
+    <div class="col-md-offset-2 col-md-9 ">
       {{#authors}}
-        <div class="container bookHolder ">
-          <div class="row">
-            <div class="col-md-2  photoHolder">
-              <img class="coverThumbnail" src="{{this.author.portrait_url}}" alt="{{this.author.first}}"/>
-            </div>
-            <div class="col-md-8">
-              <h2>{{this.author.first}} {{this.author.last}}</h2>
-              {{this.author.bio}}
-            </div>
-            <div class="col-md-1">
-              <a href="/authors/edit/{{this.author.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
-              <a href="/authors/delete/{{this.author.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
-            </div>
+        <div class="row bookHolder">
+          <div class="col-md-3 photoHolder">
+            <img class="coverThumbnail" src="{{this.author.portrait_url}}" alt="{{this.author.first}}"/>
           </div>
-          <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-6">
-              <ul>
-                {{#this.books}}
-                <li><a href="/books/{{this.id}}">{{this.title}}</a></li>
-                {{/this.books}}
-              </ul>
-            </div>
-            <div class="col-md-2">
-
-            </div>
+          <div class="col-md-8">
+            <h2>{{this.author.first}} {{this.author.last}}</h2>
+            {{this.author.bio}}
+            <br>
+            Published works:
+            {{#this.books}}
+            <li><a href="/books/{{this.id}}">{{this.title}}</a></li>
+            {{/this.books}}
           </div>
-        {{/authors}}
-      </div><!-- end container -->
-    </div><!-- end big row -->
-  </div>
+          <div class="col-md-1">
+            <a href="/authors/edit/{{this.author.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>
+            <a href="/authors/delete/{{this.author.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </div>
+        </div>
+      {{/authors}}
+    </div><!-- end colmd9 -->
+  </div><!-- end big row -->
 </div>
 <a href="/authors">
 <div class="authorsBar">

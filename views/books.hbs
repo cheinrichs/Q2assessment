@@ -1,25 +1,23 @@
 <div class="content">
   <div class="row">
     <div class="col-md-offset-2 col-md-9">
-      <table class="table">
-        {{#books}}
-          <div class="row bookHolder">
-            <div class="col-md-3  photoHolder">
-              <a href="/books/{{this.id}}"><img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/></a>
-            </div>
-            <div class="col-md-8">
-              <h2><a href="/books/{{this.id}}">{{this.title}}</a></h2>
-              by: {{this.authors}}<br>
-              {{this.genre}}<br>
-              {{this.description}}
-            </div>
-            <div class="col-md-1">
-              <a href="/books/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
-              <a href="/books/delete/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-            </div>
+      {{#books}}
+        <div class="row bookHolder">
+          <div class="col-md-3  photoHolder">
+            <a href="/books/{{this.id}}"><img class="coverThumbnail" src="{{this.cover_url}}" alt="{{this.title}}"/></a>
           </div>
-        {{/books}}
-      </table>
+          <div class="col-md-8">
+            <h2><a href="/books/{{this.id}}">{{this.title}}</a></h2>
+            by: {{this.authors}}<br>
+            {{this.genre}}<br>
+            {{this.description}}
+          </div>
+          <div class="col-md-1">
+            <a href="/books/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
+            <a href="/books/delete/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      {{/books}}
     </div>
   </div>
 </div>

@@ -1,31 +1,21 @@
 <div class="content">
   <div class="row">
-    <div class="col-md-offset-2 col-md-8">
-        {{#authors}}
-        <div class="container bookHolder">
-          <div class="row">
-            <div class="col-md-3  photoHolder">
-              <a href="/authors/{{this.id}}"><img class="coverThumbnail" src="{{this.portrait_url}}" alt="{{this.first}}"/></a>
-            </div>
-            <div class="col-md-8">
-              <h2><a href="/authors/{{this.id}}">{{this.first}} {{this.last}}</a></h2>
-              {{this.bio}}
-            </div>
-            <div class="col-md-1">
-              <a href="/authors/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
-              <a href="/authors/delete/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-            </div>
+    <div class="col-md-offset-2 col-md-9">
+      {{#authors}}
+        <div class="row bookHolder">
+          <div class="col-md-3  photoHolder">
+            <a href="/authors/{{this.id}}"><img class="coverThumbnail" src="{{this.portrait_url}}" alt="{{this.first}}"/></a>
           </div>
-          <div class="row">
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-8">
-              <ul>
-                {{#this.books}}
-                <li><a href="{{this.id}}">{{this.title}}</a></li>
-                {{/this.books}}
-              </ul>
-            </div>
+          <div class="col-md-8">
+            <h2><a href="/authors/{{this.id}}">{{this.first}} {{this.last}}</a></h2>
+            {{this.bio}}
+            {{#this.books}}
+            <li><a href="{{this.id}}">{{this.title}}</a></li>
+            {{/this.books}}
+          </div>
+          <div class="col-md-1">
+            <a href="/authors/edit/{{this.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span></a><br>
+            <a href="/authors/delete/{{this.id}}" alt="delete"><span class="editDelete glyphicon glyphicon-remove" aria-hidden="true"></span></a>
           </div>
         </div>
         {{/authors}}

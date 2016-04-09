@@ -62,6 +62,7 @@ body {
 
 .coverThumbnail {
   height: 180px;
+  width: 180px;
 }
 
 .photoHolder {
@@ -88,24 +89,10 @@ body {
   border-radius: 5px;
 }
 
-
-/*.addAuthorButton{
-  position: absolute;
-  top: 80px;
-  right: 58px;
-  width: 100px;
-  height: 40px;
-  background-color: #F15048;
-  border-radius: 5px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-}*/
-
 .addAuthorButton {
   position: absolute;
   top: 135px;
-  left: 400px;
+  left: 276px;
   width: 100px;
   height: 33px;
   font-size: 13px;
@@ -119,7 +106,7 @@ body {
 .addBookButton {
   position: absolute;
   top: 135px;
-  left: 400px;
+  left: 276px;
   width: 100px;
   height: 33px;
   font-size: 13px;
@@ -153,5 +140,5 @@ body {
 .limit{
   position: absolute;
   top: 135px;
-  left: 276px;
+  left: 400px;
 }
