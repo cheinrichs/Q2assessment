@@ -41,6 +41,21 @@
   </div>
 </form>
 
+{{#if genres}}
+<form class="" action="/books/genre" method="post">
+  <div class="form-group genreSort">
+    <select class="form-control" name="genreSort" id="genreSort" onchange="this.form.submit()">
+      {{#genres}}
+      <option value="{{this.genre}}">{{this.genre}}</option>
+      {{/genres}}
+      <option value="Show All" selected>Filter by genre...</option>
+    </select>
+  </div>
+</form>
+{{else}}
+<a href="/books/"><div class="fullList">Back to full list</div></a>
+{{/if}}
+
 <a href="/books/new"><div class="addBookButton">Create New Book</div></a>
 
 <a href="/authors">

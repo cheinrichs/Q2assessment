@@ -5,7 +5,9 @@ var queries = require('../lib');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   queries.listAllBooks().then(function(books){
-    res.render('books', { books: books.books, count: books.count[0] });
+    queries.getGenres().then(function(genres){
+      res.render('books', { books: books.books, count: books.count[0], genres: genres });
+    });
   });
 });
 
@@ -51,6 +53,14 @@ router.get('/edit/:id', function(req, res, next){
 router.post('/submitEdits/:id', function(req, res, next){
   queries.editBook(req.params.id, req.body.title, req.body.genre, req.body.description, req.body.coverImageUrl, req.body.authorsChecked).then(function(){
     res.redirect('/books');
+  });
+});
+
+router.post('/genre', function(req, res, next){
+  queries.listByGenre(req.body.genreSort).then(function(books){
+    console.log(books);
+    //***fix count
+    res.render('books', { books: books.books, count: books.count[0]});
   });
 });
 

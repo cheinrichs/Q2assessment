@@ -147,3 +147,25 @@ body {
   top: 135px;
   left: 400px;
 }
+
+.genreSort {
+  position: absolute;
+  top: 135px;
+  left: 540px;
+}
+
+.fullList {
+  position: absolute;
+  top: 135px;
+  left: 540px;
+  width: 120px;
+  height: 33px;
+  font-size: 13px;
+  background-color: #F15048;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 33px;
+}
