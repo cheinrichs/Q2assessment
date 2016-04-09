@@ -11,9 +11,11 @@
             {{this.author.bio}}
             <br>
             Published works:
-            {{#this.books}}
-            <li><a href="/books/{{this.id}}">{{this.title}}</a></li>
-            {{/this.books}}
+            <ul>
+              {{#this.books}}
+              <li><a href="/books/{{this.id}}">{{this.title}}</a></li>
+              {{/this.books}}
+            </ul>
           </div>
           <div class="col-md-1">
             <a href="/authors/edit/{{this.author.id}}" alt="edit"><span class="editDelete glyphicon glyphicon-edit" aria-hidden="true"></span><br>

@@ -52,6 +52,7 @@ router.post('/createNewAuthor', function(req, res, next){
 
 router.get('/:id', function(req, res, next){
   queries.showAuthorById(req.params.id).then(function(author){
+    console.log(author);
     res.render('author', { authors: author });
   });
 });
