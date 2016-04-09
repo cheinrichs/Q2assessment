@@ -39,7 +39,7 @@ router.get('/edit/:id', function(req, res, next){
 });
 
 router.post('/submitEdits/:id', function(req, res, next){
-  queries.editBook(req.params.id, req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(){
+  queries.editAuthor(req.params.id, req.body.firstName, req.body.lastName, req.body.biography, req.body.portraitUrl).then(function(){
     res.redirect('/authors');
   });
 });
